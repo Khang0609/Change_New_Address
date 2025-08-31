@@ -2,9 +2,7 @@ import os
 from utils import convert_to_filename
 import json
 
-data_of_2025 = "sample_data/map_2025"
-
-def get_all_file_paths(directory):
+def get_all_file_paths(directory, data_of_2025):
     file_paths = []
     for root, _, files in os.walk(directory):
         for file in files:
