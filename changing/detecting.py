@@ -2,14 +2,14 @@ import os
 from utils import convert_to_filename
 import json
 
-def get_all_file_paths(directory, data_of_2025):
+def get_all_file_paths(directory):
     file_paths = []
     for root, _, files in os.walk(directory):
         for file in files:
             file_paths.append(os.path.join(root, file))
     return file_paths
 
-def run(path):
+def run(path, data_of_2025):
     with open(path, "r", encoding="utf-8") as f:
         list_of_addresses = f.readlines()
 
